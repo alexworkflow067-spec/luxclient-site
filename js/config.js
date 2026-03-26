@@ -5,28 +5,29 @@
   latestVersion: "1.21.4",
   loader: "Fabric",
   download: {
-    file: "/downloads/LuxClient-Setup-latest.exe",
+    file: "https://github.com/alexetrey/lux-client/releases/latest/download/LuxClient-Setup-1.0.0.exe",
     version: "1.0.0",
-    sizeLabel: "100 MB",
+    sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
     sha256: "1681001192083AD073531BDE25EE53011C30A0CCD6A826130977B320DF2A48F5"
   },
   community: {
-    discord: "https://discord.gg/luxclient",
-    youtube: "https://youtube.com/@Lucnoxity",
+    discord: "https://discord.gg/Wck39YDpZx",
+    youtube: "https://youtube.com/@lucnoxity1258",
     tierlist: "https://discord.gg/luctierlist",
     development: "https://discord.gg/4nU3FUVRC8"
   },
   titlePills: [
     { label: "play.smpvpp.com", url: "https://play.smpvpp.com" },
-    { label: "Lucnoxity", url: "https://youtube.com/@Lucnoxity" },
+    { label: "Lucnoxity", url: "https://youtube.com/@lucnoxity1258" },
     { label: "Optimization Mods", url: "https://modrinth.com/mods?g=categories:%27optimization%27" }
   ],
   defaultMods: ["Sodium", "Lithium", "FerriteCore", "EntityCulling", "ImmediatelyFast"],
   partners: [
     { label: "Lucnoxity", role: "Owner", color: "#acd0ff" },
     { label: "YourNotLuis", role: "Creator", color: "#f8b96f" },
-    { label: "Link101", role: "Creator", color: "#f0d086" }
+    { label: "Link101", role: "Creator", color: "#f0d086" },
+    { label: "Alexetrey", role: "Developer", color: "#a8e6a3" }
   ],
   announcements: [
     {
