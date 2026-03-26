@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Lux Client - Performance Minecraft Launcher</title>
+  <meta name="description" content="Lux Client is a free performance-focused Minecraft launcher for Windows with pre-installed optimization mods." />
+  <meta property="og:title" content="Lux Client - Performance Minecraft Launcher" />
+  <meta property="og:description" content="Free performance-focused Minecraft launcher for Windows with pre-installed optimization mods. Fabric 1.20 - 1.21.4." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/icon.png" />
+  <meta name="theme-color" content="#1e6ef5" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/config.js"></script>
+</head>
+<body data-page="home">
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="/">
+        <img src="/assets/icon.png" alt="Lux Client" />
+        <span class="brand-title" data-app-name>Lux Client</span>
+        <span class="badge badge-brand">Beta</span>
+      </a>
+
+      <nav class="nav-links">
+        <a class="nav-link" href="/" data-nav="home">Home</a>
+        <a class="nav-link" href="/features/" data-nav="features">Features</a>
+        <a class="nav-link" href="/download/" data-nav="download">Download</a>
+        <a class="nav-link" href="/changelog/" data-nav="changelog">Changelog</a>
+        <a class="nav-link" href="/store/" data-nav="store">Store</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-ghost" href="https://discord.gg/luxclient" target="_blank" rel="noreferrer" data-discord-link>Discord</a>
+        <a class="btn btn-primary" href="/download/">Download</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">Menu</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav">
+      <div class="container">
+        <a class="nav-link" href="/" data-nav="home">Home</a>
+        <a class="nav-link" href="/features/" data-nav="features">Features</a>
+        <a class="nav-link" href="/download/" data-nav="download">Download</a>
+        <a class="nav-link" href="/changelog/" data-nav="changelog">Changelog</a>
+        <a class="nav-link" href="/store/" data-nav="store">Store</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="badge badge-brand reveal">Beta now available - free download</div>
+        <img class="hero-logo reveal" src="/assets/icon.png" alt="Lux logo" />
+        <h1 class="title reveal"><span class="gradient-text" data-app-name>Lux Client</span></h1>
+        <p class="subtitle reveal">The performance Minecraft launcher for <strong data-version-range>1.20 - 1.21.4</strong></p>
+        <p class="hero-note reveal">Built by <span data-owner>Lucnoxity</span> - <span data-loader>Fabric</span> - Windows - Free</p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="/download/">Download for Windows</a>
+          <a class="btn btn-outline" href="/features/">See features</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container stats-grid">
+        <div>
+          <div class="stat-value">200+</div>
+          <div class="stat-label">Discord members</div>
+        </div>
+        <div>
+          <div class="stat-value" data-version-range>1.20 - 1.21.4</div>
+          <div class="stat-label">Supported versions</div>
+        </div>
+        <div>
+          <div class="stat-value" id="statsModsCount">5</div>
+          <div class="stat-label">Default performance mods</div>
+        </div>
+        <div>
+          <div class="stat-value">Windows</div>
+          <div class="stat-label">Build target</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-compact">
+      <div class="container two-col">
+        <article class="card card-pad reveal">
+          <div class="card-label">Client announcements</div>
+          <div class="ann-list" id="homeAnnouncements"></div>
+        </article>
+
+        <article class="card card-pad reveal">
+          <div class="card-label">Client data</div>
+          <div class="data-list" id="homePartners"></div>
+          <div class="row"><span class="row-label">Latest version</span><span data-preview-version>1.21.4</span></div>
+          <div class="row"><span class="row-label">Loader</span><span id="previewLoader">Fabric</span></div>
+          <div class="row"><span class="row-label">Platform</span><span>Windows x64</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="marquee">
+      <div class="container">
+        <div class="marquee-label">Pre-installed performance mods</div>
+        <div class="marquee-track" id="modsMarquee"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow reveal">Why Lux Client</div>
+        <h2 class="title reveal" style="text-align:center;"><span class="gradient-text">Built for performance</span></h2>
+        <p class="subtitle reveal" style="text-align:center;max-width:620px;margin:0 auto 20px;">Every feature is designed to get you in-game faster with less setup.</p>
+
+        <div class="grid-2" id="featuresGrid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="eyebrow reveal" style="text-align:center;">Interface</div>
+        <h2 class="title reveal" style="text-align:center;"><span class="gradient-text">Clean. Simple. Fast.</span></h2>
+
+        <article class="preview-window reveal">
+          <div class="preview-head">
+            <div class="preview-left">
+              <img src="/assets/icon.png" alt="Lux" style="width:14px;height:14px;" />
+              <span style="font-size:11px;font-weight:700;">Lux Client</span>
+              <span class="badge badge-brand" style="padding:1px 6px;font-size:8px;">Beta</span>
+            </div>
+            <div class="preview-pills" id="previewPills"></div>
+          </div>
+
+          <div class="preview-body">
+            <div class="preview-side">
+              <div class="active"></div>
+              <div></div>
+              <div></div>
+            </div>
+            <div class="preview-main">
+              <div class="preview-hero">
+                <div class="card-label" style="margin-bottom:0;">Lux Client</div>
+                <div class="preview-version" id="previewVersion">1.21.4</div>
+                <p class="small-muted">Logged in as <span id="previewOwner" data-owner>Lucnoxity</span></p>
+                <span class="preview-launch">Launch Game</span>
+              </div>
+              <div class="preview-foot">
+                <div class="preview-feed">
+                  <div class="card-label" style="margin-bottom:8px;">Announcements</div>
+                  <div class="preview-feed-item">Lux Client Beta is live!</div>
+                  <div class="preview-feed-item">1.21.4 now supported</div>
+                </div>
+                <div class="preview-info">
+                  <div class="card-label" style="margin-bottom:8px;">Quick info</div>
+                  <div class="row"><span class="row-label">Version</span><span data-preview-version>1.21.4</span></div>
+                  <div class="row"><span class="row-label">Loader</span><span data-preview-loader>Fabric</span></div>
+                  <div class="row"><span class="row-label">Status</span><span style="color:var(--ok);">Ready</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="card cta reveal">
+          <img class="cta-logo" src="/assets/icon.png" alt="Lux" />
+          <h2 class="title"><span class="gradient-text">Ready to play faster?</span></h2>
+          <p class="subtitle">Join over 200 players already using Lux Client.</p>
+          <div class="hero-actions" style="margin-top:18px;">
+            <a class="btn btn-primary" href="/download/">Download free</a>
+            <a class="btn btn-outline" href="https://discord.gg/luxclient" target="_blank" rel="noreferrer" data-discord-link>Join Discord</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand" style="margin-bottom:10px;">
+            <img src="/assets/icon.png" alt="Lux" style="width:24px;height:24px;" />
+            <span class="brand-title" data-app-name>Lux Client</span>
+          </div>
+          <p class="small-muted">Performance launcher for <span data-version-range>1.20 - 1.21.4</span>. Built by <span data-owner>Lucnoxity</span>.</p>
+        </div>
+
+        <div>
+          <div class="footer-title">Product</div>
+          <div class="footer-links">
+            <a href="/features/">Features</a>
+            <a href="/download/">Download</a>
+            <a href="/changelog/">Changelog</a>
+            <a href="/store/">Store</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Community</div>
+          <div class="footer-links">
+            <a href="https://discord.gg/luxclient" target="_blank" rel="noreferrer" data-discord-link>Discord</a>
+            <a href="https://youtube.com/@Lucnoxity" target="_blank" rel="noreferrer" data-youtube-link>YouTube</a>
+            <a href="https://discord.gg/luctierlist" target="_blank" rel="noreferrer" data-tierlist-link>TierList</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Legal</div>
+          <div class="footer-links">
+            <a href="/terms/">Terms</a>
+            <a href="/privacy/">Privacy</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; <span data-year></span> Lux Client. Not affiliated with Mojang or Microsoft.</span>
+        <span>Made for <span data-owner>Lucnoxity</span>'s community.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

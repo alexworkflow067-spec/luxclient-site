@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self';" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <title>Features - Lux Client</title>
+  <meta name="description" content="All launcher features in Lux Client: performance mods, auth, updates, Java management and mod tools." />
+  <meta property="og:title" content="Features - Lux Client" />
+  <meta property="og:description" content="Performance mods, mod manager, Microsoft auth, Java management, multi-version support, and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/assets/icon.png" />
+  <meta name="theme-color" content="#1e6ef5" />
+  <link rel="icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/config.js"></script>
+</head>
+<body data-page="features">
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="/"><img src="/assets/icon.png" alt="Lux" /><span class="brand-title" data-app-name>Lux Client</span><span class="badge badge-brand">Beta</span></a>
+      <nav class="nav-links">
+        <a class="nav-link" href="/" data-nav="home">Home</a>
+        <a class="nav-link" href="/features/" data-nav="features">Features</a>
+        <a class="nav-link" href="/download/" data-nav="download">Download</a>
+        <a class="nav-link" href="/changelog/" data-nav="changelog">Changelog</a>
+        <a class="nav-link" href="/store/" data-nav="store">Store</a>
+      </nav>
+      <div class="nav-actions"><a class="btn btn-ghost" href="https://discord.gg/luxclient" target="_blank" rel="noreferrer" data-discord-link>Discord</a><a class="btn btn-primary" href="/download/">Download</a><button class="nav-toggle" id="navToggle" aria-label="Open menu">Menu</button></div>
+    </div>
+    <nav class="mobile-nav" id="mobileNav"><div class="container"><a class="nav-link" href="/" data-nav="home">Home</a><a class="nav-link" href="/features/" data-nav="features">Features</a><a class="nav-link" href="/download/" data-nav="download">Download</a><a class="nav-link" href="/changelog/" data-nav="changelog">Changelog</a><a class="nav-link" href="/store/" data-nav="store">Store</a></div></nav>
+  </header>
+
+  <main>
+    <section class="page-top">
+      <div class="container">
+        <div class="eyebrow reveal">Features</div>
+        <h1 class="title reveal"><span class="gradient-text">Everything you need</span></h1>
+        <p class="subtitle reveal" style="max-width:700px;margin:0 auto;">Lux Client handles setup, optimization, and launch flow so you can focus on playing.</p>
+      </div>
+    </section>
+
+    <section class="section-compact">
+      <div class="container grid-2" id="featuresGrid"></div>
+    </section>
+
+    <section class="section-compact">
+      <div class="container">
+        <article class="card feature-card reveal" style="opacity:0.65;">
+          <div class="feature-top"><div class="icon-box" style="border-color:rgba(210,153,34,0.35);background:rgba(210,153,34,0.1);">&#10024;</div><span class="badge badge-warn">Coming Soon</span></div>
+          <h2 class="feature-title">Cape &amp; Cosmetics Store</h2>
+          <p class="feature-desc">Exclusive Lux capes and accessories are planned after beta launch. Stay tuned in our Discord for updates.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><div class="brand" style="margin-bottom:10px;"><img src="/assets/icon.png" alt="Lux" style="width:24px;height:24px;" /><span class="brand-title" data-app-name>Lux Client</span></div><p class="small-muted">Performance launcher for <span data-version-range>1.20 - 1.21.4</span>. Built by <span data-owner>Lucnoxity</span>.</p></div>
+        <div><div class="footer-title">Product</div><div class="footer-links"><a href="/features/">Features</a><a href="/download/">Download</a><a href="/changelog/">Changelog</a><a href="/store/">Store</a></div></div>
+        <div><div class="footer-title">Community</div><div class="footer-links"><a href="https://discord.gg/luxclient" target="_blank" rel="noreferrer" data-discord-link>Discord</a><a href="https://youtube.com/@Lucnoxity" target="_blank" rel="noreferrer" data-youtube-link>YouTube</a><a href="https://discord.gg/luctierlist" target="_blank" rel="noreferrer" data-tierlist-link>TierList</a></div></div>
+        <div><div class="footer-title">Legal</div><div class="footer-links"><a href="/terms/">Terms</a><a href="/privacy/">Privacy</a></div></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span data-year></span> Lux Client. Not affiliated with Mojang or Microsoft.</span><span>Made for <span data-owner>Lucnoxity</span>'s community.</span></div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
