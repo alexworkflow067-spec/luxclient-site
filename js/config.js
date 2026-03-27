@@ -9,7 +9,7 @@
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
-    sha256: "3DF65AB3FF0C399A2ED118BA448C43F295C951AEAC99F2B37235F44BEE0ED717"
+    sha256: "BB0011B4B0FF03C3118C0B5A5273E20AD109D87C550EAE2A7CB30C41BF210787"
   },
   community: {
     discord: "https://discord.gg/Wck39YDpZx",
@@ -22,7 +22,7 @@
     { label: "Lucnoxity", url: "https://youtube.com/@lucnoxity1258" },
     { label: "Optimization Mods", url: "https://modrinth.com/mods?g=categories:%27optimization%27" }
   ],
-  defaultMods: ["Sodium", "Lithium", "FerriteCore", "ImmediatelyFast", "Entity Culling", "Dynamic FPS", "Iris Shaders", "Voxy", "Mod Menu", "AppleSkin", "Shield Fixes", "FastQuit", "Cubes Without Borders", "Combat Hitboxes", "Shulker Box Tooltip", "Marlow's Crystal Optimizer", "Hero's Anchor Optimizer"],
+  defaultMods: ["Fabric API", "Cloth Config", "WalksyLib", "Sodium", "Lithium", "FerriteCore", "ImmediatelyFast", "Entity Culling", "Dynamic FPS", "Nvidium", "Iris Shaders", "Cubes Without Borders", "Mod Menu", "AppleSkin", "Shield Fixes", "FastQuit", "Shulker Box Tooltip", "Combat Hitboxes", "Marlow's Crystal Optimizer", "Hero's Anchor Optimizer"],
   partners: [
     { label: "Lucnoxity", role: "Creator", color: "#acd0ff" },
     { label: "Alexetrey", role: "Developer", color: "#a8e6a3" }
