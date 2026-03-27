@@ -1,6 +1,6 @@
 ﻿window.LUX_CONFIG = {
   appName: "Lux Client",
-  owner: "Lucnoxity",
+  owner: "Alexetrey",
   versionRange: "1.20 - 1.21.4",
   latestVersion: "1.21.4",
   loader: "Fabric",
@@ -24,9 +24,7 @@
   ],
   defaultMods: ["Sodium", "Lithium", "FerriteCore", "EntityCulling", "ImmediatelyFast"],
   partners: [
-    { label: "Lucnoxity", role: "Owner", color: "#acd0ff" },
-    { label: "YourNotLuis", role: "Creator", color: "#f8b96f" },
-    { label: "Link101", role: "Creator", color: "#f0d086" },
+    { label: "Lucnoxity", role: "Creator", color: "#acd0ff" },
     { label: "Alexetrey", role: "Developer", color: "#a8e6a3" }
   ],
   announcements: [
