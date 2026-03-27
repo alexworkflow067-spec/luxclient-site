@@ -9,7 +9,7 @@
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
-    sha256: "CE3D502B1313A0A34BFDB979D143057E58EAEF6CA6A781C803124A6938A1F275"
+    sha256: "042A2E10BA66A5F036F105409D0BCE7D2D5BBCA3A65CEC0F80A0DD95D30A49BB"
   },
   community: {
     discord: "https://discord.gg/Wck39YDpZx",
@@ -22,7 +22,7 @@
     { label: "Lucnoxity", url: "https://youtube.com/@lucnoxity1258" },
     { label: "Optimization Mods", url: "https://modrinth.com/mods?g=categories:%27optimization%27" }
   ],
-  defaultMods: ["Sodium", "Lithium", "FerriteCore", "EntityCulling", "ImmediatelyFast"],
+  defaultMods: ["Sodium", "Lithium", "FerriteCore", "ImmediatelyFast", "Entity Culling", "Dynamic FPS", "Iris Shaders", "Voxy", "Mod Menu", "AppleSkin", "Shield Fixes", "FastQuit", "Cubes Without Borders", "Combat Hitboxes", "Shulker Box Tooltip", "Marlow's Crystal Optimizer", "Hero's Anchor Optimizer"],
   partners: [
     { label: "Lucnoxity", role: "Creator", color: "#acd0ff" },
     { label: "Alexetrey", role: "Developer", color: "#a8e6a3" }
