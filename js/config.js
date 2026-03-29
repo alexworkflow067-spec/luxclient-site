@@ -1,8 +1,8 @@
 ﻿window.LUX_CONFIG = {
   appName: "Lux Client",
   owner: "Alexetrey",
-  versionRange: "1.20 - 1.21.4",
-  latestVersion: "1.21.4",
+  versionRange: "1.20 - 1.21.11",
+  latestVersion: "1.21.11",
   loader: "Fabric",
   download: {
     file: "/downloads/LuxClient-Setup-latest.exe",
@@ -32,14 +32,14 @@
       id: "beta-live",
       type: "update",
       title: "Lux Client Beta is live!",
-      body: "Welcome to Lux Client Beta. Fabric 1.20 through 1.21.4 supported. Sodium, Lithium, FerriteCore pre-installed for maximum performance. Report bugs in our Discord.",
+      body: "Welcome to Lux Client Beta. Fabric 1.20 through 1.21.11 supported. Sodium, Lithium, FerriteCore pre-installed for maximum performance. Report bugs in our Discord.",
       pinned: true
     },
     {
       id: "mc-1214",
       type: "info",
-      title: "1.21.4 now supported",
-      body: "The latest Minecraft 1.21.4 release is now available. All performance mods have been updated to support the latest version.",
+      title: "1.21.11 now supported",
+      body: "The latest Minecraft 1.21.11 release is now available. All performance mods have been updated to support the latest version.",
       pinned: false
     }
   ],
@@ -77,7 +77,7 @@
       category: "Versions",
       title: "Multi-Version Support",
       desc: "Install and switch quickly between supported Minecraft releases with Fabric profiles.",
-      highlight: "1.20 - 1.21.4"
+      highlight: "1.20 - 1.21.11"
     },
     {
       icon: "🔁",
@@ -95,7 +95,7 @@
       title: "Initial Beta Release",
       changes: [
         { type: "new", text: "Microsoft account login with browser sign-in flow" },
-        { type: "new", text: "Minecraft 1.20 to 1.21.4 support" },
+        { type: "new", text: "Minecraft 1.20 to 1.21.11 support" },
         { type: "new", text: "Fabric mod loader integration with auto-install" },
         { type: "new", text: "Default performance mods pre-installed" },
         { type: "new", text: "Full mod manager with drag-and-drop .jar support" },
