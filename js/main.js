@@ -210,9 +210,13 @@
       setBtn('Installer missing', true);
     }
 
+    // Load download count on page load
+    loadDownloadCount();
+
     btn.addEventListener('click', () => {
       if (btn.disabled) return;
       setBtn('Starting download...', true);
+      incrementDownloadCount();
       window.location.href = url;
       window.setTimeout(() => setBtn('Download for Windows', false), 2200);
     });
@@ -282,6 +286,38 @@
       .join('');
   }
 
+  const COUNTER_NAMESPACE = 'luxclient';
+  const COUNTER_KEY = 'downloads';
+  const COUNTER_GET = `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${COUNTER_KEY}`;
+  const COUNTER_HIT = `https://api.counterapi.dev/v1/${COUNTER_NAMESPACE}/${COUNTER_KEY}/up`;
+
+  function formatCount(n) {
+    if (n >= 1000) return (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k';
+    return String(n);
+  }
+
+  function setCounterEls(value) {
+    qa('[data-download-count]').forEach(el => { el.textContent = value; el.closest('.dl-counter')?.classList.remove('hidden'); });
+  }
+
+  async function loadDownloadCount() {
+    try {
+      const res = await fetch(COUNTER_GET);
+      if (!res.ok) return;
+      const data = await res.json();
+      setCounterEls(formatCount(data.count || 0));
+    } catch (_) {}
+  }
+
+  async function incrementDownloadCount() {
+    try {
+      const res = await fetch(COUNTER_HIT);
+      if (!res.ok) return;
+      const data = await res.json();
+      setCounterEls(formatCount(data.count || 0));
+    } catch (_) {}
+  }
+
   function initStore() {
     // Store page is intentionally static while products are unavailable.
   }
@@ -295,6 +331,8 @@
     initChangelog();
     initStore();
     setupReveal();
+    // Load counter on any page that has [data-download-count]
+    if (document.querySelector('[data-download-count]')) loadDownloadCount();
   }
 
   document.addEventListener('DOMContentLoaded', init);

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://luxclient.net;" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.counterapi.dev;" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <title>Download - Lux Client</title>
   <meta name="description" content="Download Lux Client directly from this website as a bundled Windows installer." />
@@ -45,7 +45,11 @@
           <div class="small-muted" style="margin-bottom:8px;">SHA-256: <span id="downloadSha256">-</span></div>
           <div class="download-status" id="downloadStatus">Checking installer...</div>
           <button class="btn btn-primary" id="downloadBtn" style="font-size:16px;padding:13px 20px;">Download for Windows</button>
-          <div style="margin-top:12px;"><a class="small-muted" data-releases-link href="/downloads/LuxClient-Setup-latest.exe">Direct installer file</a></div>
+          <div class="dl-counter hidden" style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span data-download-count>0</span> downloads
+          </div>
+          <div style="margin-top:10px;"><a class="small-muted" data-releases-link href="/downloads/LuxClient-Setup-latest.exe">Direct installer file</a></div>
         </article>
       </div>
     </section>
