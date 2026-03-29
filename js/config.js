@@ -18,7 +18,7 @@
     development: "https://discord.gg/4nU3FUVRC8"
   },
   titlePills: [
-    { label: "play.smpvpp.com", url: "https://play.smpvpp.com" },
+    { label: "Development", url: "https://discord.gg/9S3rMutnbp" },
     { label: "Lucnoxity", url: "https://youtube.com/@lucnoxity1258" },
     { label: "Optimization Mods", url: "https://modrinth.com/mods?g=categories:%27optimization%27" }
   ],
