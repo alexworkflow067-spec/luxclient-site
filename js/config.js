@@ -5,11 +5,11 @@
   latestVersion: "1.21.4",
   loader: "Fabric",
   download: {
-    file: "https://github.com/alexetrey/lux-client/releases/latest/download/LuxClient-Setup-1.0.0.exe",
+    file: "/downloads/LuxClient-Setup-latest.exe",
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
-    sha256: "A0AB03086686D67B24FC2D4E9B8E4DC92707CAA4C4D10BE77F97F4941FD8A7F8"
+    sha256: "a0ab03086686d67b24fc2d4e9b8e4dc92707caa4c4d10be77f97f4941fd8a7f8"
   },
   community: {
     discord: "https://discord.gg/Wck39YDpZx",
