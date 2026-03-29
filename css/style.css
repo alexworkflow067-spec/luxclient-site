@@ -524,8 +524,23 @@ button { font-family: inherit; cursor: pointer; }
 /* ── Store ─────────────────────────────────────────────────── */
 .store-top { text-align: center; margin-bottom: 24px; }
 .store-subtitle { max-width: 520px; margin: 0 auto; }
-.store-disabled { position: relative; overflow: hidden; text-align: center; padding: 32px 20px; }
-.store-blur-content { filter: blur(3px); opacity: .35; user-select: none; pointer-events: none; }
+.store-disabled { position: relative; overflow: hidden; padding: 28px 20px; min-height: 340px; }
+.store-blur-content { filter: blur(4px); opacity: .28; user-select: none; pointer-events: none; }
+.store-coming-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(6,8,16,.6);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  padding: 24px;
+  gap: 6px;
+}
+.store-coming-icon { font-size: 40px; margin-bottom: 8px; }
 .store-fake-row { height: 11px; width: 100%; border-radius: 999px; margin-bottom: 10px; background: rgba(255,255,255,.06); }
 .store-fake-row-short { width: 55%; margin-inline: auto; margin-bottom: 14px; }
 .store-fake-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
