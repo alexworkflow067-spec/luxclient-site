@@ -180,34 +180,43 @@
     const platformLabel = config.download?.platformLabel || 'Windows x64';
     const sha256 = config.download?.sha256 || '-';
 
-    const setBtn = (text, disabled) => {
-      btn.textContent = text;
+    const statusBadge = q('#dlStatusBadge');
+
+    const setBtn = (mainText, subText, disabled) => {
+      const mainEl = btn.querySelector('.dl-btn-main');
+      const subEl  = btn.querySelector('.dl-btn-sub');
+      if (mainEl) mainEl.textContent = mainText;
+      if (subEl && subText !== undefined) subEl.textContent = subText;
       btn.disabled = disabled;
-      btn.style.opacity = disabled ? '0.65' : '1';
-      btn.style.cursor = disabled ? 'not-allowed' : 'pointer';
+      btn.style.opacity = disabled ? '0.6' : '1';
+      btn.style.cursor  = disabled ? 'not-allowed' : 'pointer';
     };
 
-    setBtn('Checking installer...', true);
+    const setBadge = (text, cls) => {
+      if (!statusBadge) return;
+      statusBadge.textContent = text;
+      statusBadge.className = 'badge ' + cls;
+    };
+
+    setBtn('Checking...', 'Please wait', true);
     releaseVersion.textContent = version;
-    releaseMeta.textContent = `Version ${version} - ${platformLabel} - ${sizeLabel}`;
+    releaseMeta.textContent = `${version} — ${platformLabel} — ${sizeLabel}`;
     if (downloadSha256) downloadSha256.textContent = sha256;
 
     try {
       const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-      if (!res.ok) throw new Error(`Installer check failed (${res.status})`);
-      status.textContent = 'Installer is bundled and ready for direct download';
+      if (!res.ok) throw new Error(`${res.status}`);
+      status.textContent = '✓ Installer verified and ready';
       status.style.color = 'var(--ok)';
+      setBadge('Ready to download', 'badge badge-ok');
       if (dynamicWarn) dynamicWarn.classList.add('hidden');
-      setBtn('Download for Windows', false);
+      setBtn('Download for Windows', 'Free · No account required', false);
     } catch (_error) {
-      status.textContent = 'Installer file is missing from website downloads folder';
+      status.textContent = 'Installer unavailable — try again later';
       status.style.color = 'var(--warn)';
-      if (dynamicWarn) {
-        dynamicWarn.classList.remove('hidden');
-        dynamicWarn.querySelector('.small-muted').textContent =
-          'Place LuxClient-Setup-latest.exe in /downloads/ and refresh this page.';
-      }
-      setBtn('Installer missing', true);
+      setBadge('Unavailable', 'badge badge-warn');
+      if (dynamicWarn) dynamicWarn.classList.remove('hidden');
+      setBtn('Unavailable', 'Check back soon', true);
     }
 
     // Load download count on page load
@@ -215,10 +224,10 @@
 
     btn.addEventListener('click', () => {
       if (btn.disabled) return;
-      setBtn('Starting download...', true);
+      setBtn('Starting download...', 'Your download will begin shortly', true);
       incrementDownloadCount();
       window.location.href = url;
-      window.setTimeout(() => setBtn('Download for Windows', false), 2200);
+      window.setTimeout(() => setBtn('Download for Windows', 'Free · No account required', false), 2200);
     });
 
     const steps = q('#installSteps');

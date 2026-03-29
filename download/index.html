@@ -38,32 +38,74 @@
     <section class="section-compact">
       <div class="container">
         <article class="card download-box reveal">
-          <img src="/assets/icon.png" alt="Lux" style="width:76px;height:76px;margin:0 auto 12px;filter:drop-shadow(0 0 22px rgba(63,132,255,0.5));" />
-          <h2 class="feature-title" style="font-size:28px;margin-bottom:6px;" data-app-name>Lux Client</h2>
-          <div class="small-muted" style="margin-bottom:6px;">Release: <span id="releaseVersion">latest</span></div>
-          <div class="download-version" id="releaseMeta">Version latest - Windows x64 - ~50 MB</div>
-          <div class="small-muted" style="margin-bottom:8px;">SHA-256: <span id="downloadSha256">-</span></div>
-          <div class="download-status" id="downloadStatus">Checking installer...</div>
-          <button class="btn btn-primary" id="downloadBtn" style="font-size:16px;padding:13px 20px;">Download for Windows</button>
-          <div class="dl-counter hidden" style="margin-top:14px;display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;color:var(--muted);">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            <span data-download-count>0</span> downloads
+
+          <!-- top: icon + name + badges -->
+          <div class="dl-header">
+            <img src="/assets/icon.png" alt="Lux Client" class="dl-icon" />
+            <div class="dl-info">
+              <h2 class="dl-title" data-app-name>Lux Client</h2>
+              <div class="dl-meta-row">
+                <span class="badge badge-ok" id="dlStatusBadge">Checking...</span>
+                <span class="badge badge-brand">v<span id="releaseVersion">1.0.0</span></span>
+                <span class="badge badge-brand">Windows x64</span>
+                <span class="badge badge-brand">Free</span>
+              </div>
+            </div>
           </div>
-          <div style="margin-top:10px;"><a class="small-muted" data-releases-link href="/downloads/LuxClient-Setup-latest.exe">Direct installer file</a></div>
-        </article>
-      </div>
-    </section>
 
-    <section class="section-compact">
-      <div class="container">
-        <article class="card warn-card reveal hidden" id="releaseDynamicWarning">
+          <!-- divider -->
+          <div class="dl-divider"></div>
+
+          <!-- meta row -->
+          <div class="dl-details">
+            <div class="dl-detail-item">
+              <span class="dl-detail-label">Version</span>
+              <span id="releaseMeta">1.0.0 — Windows x64 — ~100 MB</span>
+            </div>
+            <div class="dl-detail-item">
+              <span class="dl-detail-label">SHA-256</span>
+              <span class="dl-sha" id="downloadSha256">—</span>
+            </div>
+            <div class="dl-detail-item dl-counter hidden">
+              <span class="dl-detail-label">Downloads</span>
+              <span data-download-count>0</span>
+            </div>
+          </div>
+
+          <!-- divider -->
+          <div class="dl-divider"></div>
+
+          <!-- status line -->
+          <div class="download-status" id="downloadStatus">Verifying installer...</div>
+
+          <!-- big download button -->
+          <button class="dl-btn" id="downloadBtn">
+            <span class="dl-btn-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+            </span>
+            <span class="dl-btn-text">
+              <span class="dl-btn-main">Download for Windows</span>
+              <span class="dl-btn-sub">Free · No account required</span>
+            </span>
+          </button>
+
+          <div style="margin-top:12px;">
+            <a class="small-muted" style="font-size:11px;" data-releases-link href="/downloads/LuxClient-Setup-latest.exe">Direct installer link</a>
+          </div>
+        </article>
+
+        <article class="card warn-card reveal hidden" id="releaseDynamicWarning" style="margin-top:12px;">
           <h3 class="warn-title">Installer file notice</h3>
-          <p class="small-muted">No public release found yet.</p>
+          <p class="small-muted">No installer found.</p>
         </article>
 
-        <article class="card warn-card reveal" style="margin-top:10px;">
+        <article class="card warn-card reveal" style="margin-top:12px;">
           <h3 class="warn-title">Windows Defender SmartScreen</h3>
-          <p class="small-muted">If SmartScreen appears, click "More info" then "Run anyway". Publishing with code signing will remove this warning.</p>
+          <p class="small-muted">If SmartScreen appears, click <strong>"More info"</strong> then <strong>"Run anyway"</strong>. Code signing will remove this in a future release.</p>
         </article>
       </div>
     </section>
