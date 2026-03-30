@@ -1,8 +1,8 @@
 version: 1.0.0
 files:
-  - url: LuxClient-Setup-1.0.0.exe
+  - url: https://github.com/alexetrey/lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe
     sha512: igeICMKr4vVKjEfwj9dsOy1TI2zz3VQ1YELMy1P43xesyYOYzC7sibJoSe567RPWN0cud/EESs/RbjEawCPxdQ==
     size: 105617897
-path: LuxClient-Setup-1.0.0.exe
+path: https://github.com/alexetrey/lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe
 sha512: igeICMKr4vVKjEfwj9dsOy1TI2zz3VQ1YELMy1P43xesyYOYzC7sibJoSe567RPWN0cud/EESs/RbjEawCPxdQ==
 releaseDate: '2026-03-30T15:05:56.938Z'
