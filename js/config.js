@@ -9,7 +9,7 @@
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
-    sha256: "6233efb6c21b0ad2711103af41c230b0873cb52f840d5b57fadd449a6c9695f5"
+    sha256: "9884cfcccef82ac5737bc808b9c46799dce91ec8d6400e76f3cb4aa35393e243"
   },
   community: {
     discord: "https://discord.gg/Wck39YDpZx",
