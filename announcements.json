@@ -1,0 +1,16 @@
+[
+  {
+    "id": "beta-live",
+    "type": "update",
+    "title": "Lux Client Beta is live!",
+    "body": "Welcome to Lux Client Beta. Fabric 1.20 through 1.21.11 supported. Sodium, Lithium, FerriteCore pre-installed for maximum performance. Report bugs in our Discord.",
+    "pinned": true
+  },
+  {
+    "id": "mc-1211",
+    "type": "info",
+    "title": "1.21.11 now supported",
+    "body": "The latest Minecraft 1.21.11 release is now fully supported. All performance mods updated.",
+    "pinned": false
+  }
+]

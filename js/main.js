@@ -198,25 +198,26 @@
       statusBadge.className = 'badge ' + cls;
     };
 
-    setBtn('Checking...', 'Please wait', true);
+    // Show the download button immediately — never block users
     releaseVersion.textContent = version;
     releaseMeta.textContent = `${version} — ${platformLabel} — ${sizeLabel}`;
     if (downloadSha256) downloadSha256.textContent = sha256;
+    status.textContent = '✓ Installer ready';
+    status.style.color = 'var(--ok)';
+    setBadge('Ready to download', 'badge badge-ok');
+    if (dynamicWarn) dynamicWarn.classList.add('hidden');
+    setBtn('Download for Windows', 'Free · No account required', false);
 
+    // Verify in background — only show a soft warning, never disable the button
     try {
       const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
       if (!res.ok) throw new Error(`${res.status}`);
       status.textContent = '✓ Installer verified and ready';
-      status.style.color = 'var(--ok)';
-      setBadge('Ready to download', 'badge badge-ok');
-      if (dynamicWarn) dynamicWarn.classList.add('hidden');
-      setBtn('Download for Windows', 'Free · No account required', false);
     } catch (_error) {
-      status.textContent = 'Installer unavailable — try again later';
+      // File may still be downloadable even if HEAD is blocked by CDN
+      status.textContent = '⚠ Could not verify installer — download may still work';
       status.style.color = 'var(--warn)';
-      setBadge('Unavailable', 'badge badge-warn');
-      if (dynamicWarn) dynamicWarn.classList.remove('hidden');
-      setBtn('Unavailable', 'Check back soon', true);
+      setBadge('Unverified', 'badge badge-warn');
     }
 
     // Load download count on page load
