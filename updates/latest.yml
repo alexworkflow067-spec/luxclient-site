@@ -1,8 +1,8 @@
 version: 1.0.0
 files:
   - url: LuxClient-Setup-1.0.0.exe
-    sha512: bzk48sP487AmaK9fqcYO9c67Fb0xlIZYh+9xsq7zX2Mi8BH6WAzgF7W0JkCorAzVIYh3DmL//SSGSiSDVUdcrQ==
-    size: 105617255
+    sha512: qiwkEqe/QQ0y9rriijlA2KZ9nrZ71kYYJKmdNW4B6KhIzGW/hRWb0Lu2a/CdDgj4gnS2JX9vDplHiHKEv7/i7w==
+    size: 105617107
 path: LuxClient-Setup-1.0.0.exe
-sha512: bzk48sP487AmaK9fqcYO9c67Fb0xlIZYh+9xsq7zX2Mi8BH6WAzgF7W0JkCorAzVIYh3DmL//SSGSiSDVUdcrQ==
-releaseDate: '2026-03-30T11:53:16.101Z'
+sha512: qiwkEqe/QQ0y9rriijlA2KZ9nrZ71kYYJKmdNW4B6KhIzGW/hRWb0Lu2a/CdDgj4gnS2JX9vDplHiHKEv7/i7w==
+releaseDate: '2026-03-30T13:18:58.010Z'
