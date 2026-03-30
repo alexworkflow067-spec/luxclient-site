@@ -208,18 +208,6 @@
     if (dynamicWarn) dynamicWarn.classList.add('hidden');
     setBtn('Download for Windows', 'Free · No account required', false);
 
-    // Verify in background — only show a soft warning, never disable the button
-    try {
-      const res = await fetch(url, { method: 'HEAD', cache: 'no-store' });
-      if (!res.ok) throw new Error(`${res.status}`);
-      status.textContent = '✓ Installer verified and ready';
-    } catch (_error) {
-      // File may still be downloadable even if HEAD is blocked by CDN
-      status.textContent = '⚠ Could not verify installer — download may still work';
-      status.style.color = 'var(--warn)';
-      setBadge('Unverified', 'badge badge-warn');
-    }
-
     // Load download count on page load
     loadDownloadCount();
 
