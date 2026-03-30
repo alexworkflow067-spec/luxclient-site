@@ -215,7 +215,13 @@
       if (btn.disabled) return;
       setBtn('Starting download...', 'Your download will begin shortly', true);
       incrementDownloadCount();
-      window.location.href = url;
+      // Create a hidden <a> with download attribute to force browser download dialog
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'LuxClient-Setup-1.0.0.exe';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
       window.setTimeout(() => setBtn('Download for Windows', 'Free · No account required', false), 2200);
     });
 
