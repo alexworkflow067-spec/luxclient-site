@@ -32,7 +32,7 @@
       id: "beta-live",
       type: "update",
       title: "Lux Client Beta is live!",
-      body: "Welcome to Lux Client Beta. Fabric 1.20 through 1.21.11 supported. Sodium, Lithium, FerriteCore pre-installed for maximum performance. Report bugs in our Discord.",
+      body: "Welcome to Lux Client Beta. Minecraft 1.20 through 1.21.11 is supported, with Sodium, Lithium, and FerriteCore pre-installed for better performance. Report issues in our Discord.",
       pinned: true
     },
     {
@@ -48,42 +48,42 @@
       icon: "⚡",
       category: "Performance",
       title: "Pre-configured Performance Mods",
-      desc: "Sodium, Lithium, FerriteCore, EntityCulling and ImmediatelyFast ship with every install. No setup required.",
-      highlight: "Up to 3x FPS improvement"
+      desc: "Sodium, Lithium, FerriteCore, Entity Culling, and ImmediatelyFast are included by default in every install. No manual setup needed.",
+      highlight: "Up to 3x higher FPS"
     },
     {
       icon: "📦",
       category: "Mods",
       title: "Full Mod Manager",
-      desc: "Add .jar mods with drag and drop, toggle them on or off, and keep each Minecraft version isolated.",
+      desc: "Import .jar mods with drag-and-drop, enable or disable them instantly, and keep each Minecraft version fully isolated.",
       highlight: "Version-isolated mods"
     },
     {
       icon: "🛡",
       category: "Security",
       title: "Microsoft Authentication",
-      desc: "Secure sign-in through Microsoft's login flow. Passwords are never stored in the launcher.",
+      desc: "Sign in safely through Microsoft's official login flow. Passwords are never stored in the launcher.",
       highlight: "No password stored"
     },
     {
       icon: "🧠",
       category: "Java",
       title: "Automatic Java Management",
-      desc: "Lux Client detects local Java or downloads JRE 21 automatically and applies optimized JVM flags.",
+      desc: "Lux Client detects local Java automatically or installs JRE 21 for you, then applies optimized JVM launch flags.",
       highlight: "JRE 21 auto-installed"
     },
     {
       icon: "🧩",
       category: "Versions",
       title: "Multi-Version Support",
-      desc: "Install and switch quickly between supported Minecraft releases with Fabric profiles.",
+      desc: "Install and switch quickly between supported Minecraft releases using clean, per-version Fabric profiles.",
       highlight: "1.20 - 1.21.11"
     },
     {
       icon: "🔁",
       category: "Updates",
       title: "Automatic Update Notifications",
-      desc: "Lux Client checks for new releases in the background and shows a banner when an update is ready to install.",
+      desc: "Lux Client checks for new releases in the background and shows a clear in-app banner when an update is ready.",
       highlight: "In-app update banner"
     }
   ],

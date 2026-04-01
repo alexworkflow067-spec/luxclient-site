@@ -126,7 +126,7 @@
 
     if (marquee) {
       const mods = config.defaultMods || [];
-      const entries = mods.concat(mods);
+      const entries = Array.from(new Set(mods));
       marquee.innerHTML = entries
         .map((m) => `<span class="marquee-item"><span class="dot"></span>${m}</span>`)
         .join('');
