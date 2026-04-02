@@ -107,8 +107,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid rgba(126,163,228,.46);
   background: transparent;
   object-fit: cover;
+  object-position: center;
   box-shadow: 0 0 0 1px rgba(126,163,228,.18), 0 6px 14px rgba(46,77,130,.35);
-  transform: translateZ(0);
+  transform: scale(1.16) translateZ(0);
 }
 .brand-title { font-size: 15px; font-weight: 700; letter-spacing: 0; }
 .nav-links { display: flex; align-items: center; gap: 2px; }
@@ -154,8 +155,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid rgba(126,163,228,.46);
   background: transparent;
   object-fit: cover;
+  object-position: center;
   box-shadow: 0 0 0 1px rgba(126,163,228,.2), 0 10px 24px rgba(30,52,90,.38);
-  transform: translateZ(0);
+  transform: scale(1.14) translateZ(0);
 }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
 .hero-actions .btn { padding: 10px 16px; font-size: 14px; }
@@ -286,8 +288,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid rgba(126,163,228,.46);
   background: transparent;
   object-fit: cover;
+  object-position: center;
   box-shadow: 0 0 0 1px rgba(126,163,228,.18), 0 8px 18px rgba(30,52,90,.33);
-  transform: translateZ(0);
+  transform: scale(1.14) translateZ(0);
 }
 
 /* ── Download card ─────────────────────────────────────────── */
@@ -310,8 +313,9 @@ button { font-family: inherit; cursor: pointer; }
   border: 1px solid rgba(126,163,228,.46);
   background: transparent;
   object-fit: cover;
+  object-position: center;
   box-shadow: 0 0 0 1px rgba(126,163,228,.18), 0 10px 22px rgba(30,52,90,.36);
-  transform: translateZ(0);
+  transform: scale(1.14) translateZ(0);
   flex-shrink: 0;
 }
 .dl-info { text-align: left; }
