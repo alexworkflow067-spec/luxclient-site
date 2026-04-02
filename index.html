@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self' https://api.counterapi.dev;" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <title>Lux Client - Performance Minecraft Launcher</title>
-  <meta name="description" content="Lux Client is a free performance-focused Minecraft launcher for Windows with pre-installed optimization mods." />
-  <meta property="og:title" content="Lux Client - Performance Minecraft Launcher" />
-  <meta property="og:description" content="Free performance-focused Minecraft launcher for Windows with pre-installed optimization mods. Fabric 1.20 - 1.21.11." />
+  <title>Lux Client - Premium Performance Minecraft Launcher</title>
+  <meta name="description" content="Lux Client is a premium performance-focused Minecraft launcher for Windows with pre-installed optimization mods and a clean modern experience." />
+  <meta property="og:title" content="Lux Client - Premium Performance Minecraft Launcher" />
+  <meta property="og:description" content="A performance-first Minecraft launcher with pre-configured optimization mods, fast setup, and a polished in-game experience." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/assets/image.png" />
   <meta name="theme-color" content="#1e6ef5" />
@@ -52,22 +52,83 @@
   </header>
 
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="badge badge-brand reveal">Beta now available - free download</div>
-        <img class="hero-logo reveal" src="/assets/icon.png" alt="Lux logo" />
-        <h1 class="title reveal"><span class="gradient-text" data-app-name>Lux Client</span></h1>
-        <p class="subtitle reveal">The performance Minecraft launcher for <strong data-version-range>1.20 - 1.21.11</strong></p>
-        <p class="hero-note reveal">Built by <span data-owner>Alexetrey</span> - <span data-loader>Fabric</span> - Windows - Free</p>
-        <div class="hero-actions reveal">
-          <a class="btn btn-primary" href="/download/">Download for Windows</a>
-          <a class="btn btn-outline" href="/features/">See features</a>
+    <section class="hero hero-premium" id="top">
+      <div class="hero-orb hero-orb-a" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-b" aria-hidden="true"></div>
+      <div class="hero-grid-line" aria-hidden="true"></div>
+
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow reveal">Minecraft Performance Launcher</div>
+          <h1 class="title hero-title reveal">Play Faster With <span class="gradient-text" data-app-name>Lux Client</span></h1>
+          <p class="subtitle hero-subtitle reveal">
+            A polished launcher focused on performance, stability, and instant setup for <strong data-version-range>1.20 - 1.21.11</strong>.
+          </p>
+
+          <div class="hero-meta reveal">
+            <span class="chip">Windows x64</span>
+            <span class="chip"><span data-loader>Fabric</span> ready</span>
+            <span class="chip">Built by <span data-owner>Alexetrey</span></span>
+          </div>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary btn-lg" href="/download/">Download for Windows</a>
+            <a class="btn btn-outline btn-lg" href="#homeFeatures">See Features</a>
+          </div>
+
+          <div class="hero-trust reveal">
+            <span>Built for smooth PvP and everyday survival sessions.</span>
+            <a href="https://discord.gg/Wck39YDpZx" target="_blank" rel="noreferrer" data-discord-link>Join community</a>
+          </div>
+        </div>
+
+        <div class="hero-showcase reveal" data-parallax data-parallax-depth="12">
+          <article class="launcher-shell">
+            <div class="launcher-top">
+              <div class="launcher-top-left">
+                <img src="/assets/icon.png" alt="Lux" />
+                <span data-app-name>Lux Client</span>
+              </div>
+              <div class="launcher-pill-row">
+                <span class="launcher-pill">v<span data-preview-version>1.21.11</span></span>
+                <span class="launcher-pill"><span data-preview-loader>Fabric</span></span>
+              </div>
+            </div>
+
+            <div class="launcher-body">
+              <aside class="launcher-nav" aria-hidden="true">
+                <span class="is-active"></span>
+                <span></span>
+                <span></span>
+              </aside>
+
+              <div class="launcher-main">
+                <div class="launcher-hero">
+                  <p class="card-label">Ready to launch</p>
+                  <h3>Performance Profile Active</h3>
+                  <p class="small-muted">Logged in as <span data-owner>Lucnoxity</span></p>
+                  <span class="preview-launch">Launch Game</span>
+                </div>
+
+                <div class="launcher-feed">
+                  <article>
+                    <p class="card-label">Announcements</p>
+                    <p>Beta release is live for everyone.</p>
+                  </article>
+                  <article>
+                    <p class="card-label">Quick info</p>
+                    <p>Version: <span data-preview-version>1.21.11</span></p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="stats">
-      <div class="container stats-grid">
+      <div class="container stats-grid reveal">
         <div>
           <div class="stat-value">200+</div>
           <div class="stat-label">Discord members</div>
@@ -91,46 +152,69 @@
       </div>
     </section>
 
-    <section class="section-compact">
-      <div class="container two-col">
-        <article class="card card-pad reveal">
-          <div class="card-label">Client announcements</div>
-          <div class="ann-list" id="homeAnnouncements"></div>
-        </article>
+    <section class="section" id="whyLux">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Why choose Lux Client</p>
+          <h2 class="section-title">Fast setup, clean launcher workflow, and reliable performance</h2>
+          <p class="section-subtitle">Every part of Lux Client is designed to reduce setup time and keep your game sessions stable.</p>
+        </div>
 
-        <article class="card card-pad reveal">
-          <div class="card-label">Client data</div>
-          <div class="data-list" id="homePartners"></div>
-          <div class="row"><span class="row-label">Latest version</span><span data-preview-version>1.21.11</span></div>
-          <div class="row"><span class="row-label">Loader</span><span id="previewLoader">Fabric</span></div>
-          <div class="row"><span class="row-label">Platform</span><span>Windows x64</span></div>
-        </article>
+        <div class="why-grid">
+          <article class="card card-pad reveal">
+            <div class="card-label">Client announcements</div>
+            <div class="ann-list" id="homeAnnouncements"></div>
+          </article>
+
+          <article class="card card-pad reveal">
+            <div class="card-label">Client data</div>
+            <div class="data-list" id="homePartners"></div>
+            <div class="row"><span class="row-label">Latest version</span><span data-preview-version>1.21.11</span></div>
+            <div class="row"><span class="row-label">Loader</span><span id="previewLoader">Fabric</span></div>
+            <div class="row"><span class="row-label">Platform</span><span>Windows x64</span></div>
+          </article>
+
+          <article class="card card-pad reveal why-points">
+            <div class="card-label">What you get</div>
+            <ul class="check-list">
+              <li>Pre-installed optimization stack with no manual setup.</li>
+              <li>Per-version mod isolation so profiles stay clean.</li>
+              <li>Microsoft authentication flow with secure account handling.</li>
+              <li>Simple update experience designed for daily use.</li>
+            </ul>
+          </article>
+        </div>
       </div>
     </section>
 
     <section class="marquee">
-      <div class="container">
+      <div class="container reveal">
         <div class="marquee-label">Pre-installed performance mods</div>
         <div class="marquee-track" id="modsMarquee"></div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="homeFeatures">
       <div class="container">
-        <div class="eyebrow reveal">Why Lux Client</div>
-        <h2 class="title reveal" style="text-align:center;"><span class="gradient-text">Built for performance</span></h2>
-        <p class="subtitle reveal" style="text-align:center;max-width:620px;margin:0 auto 20px;">Every feature is designed to get you in-game faster with less setup.</p>
+        <div class="section-head reveal">
+          <p class="eyebrow">Feature stack</p>
+          <h2 class="section-title">Core tools built for performance-focused Minecraft players</h2>
+          <p class="section-subtitle">High-quality launcher essentials with premium UI polish and responsive interactions.</p>
+        </div>
 
         <div class="grid-2" id="featuresGrid"></div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="eyebrow reveal" style="text-align:center;">Interface</div>
-        <h2 class="title reveal" style="text-align:center;"><span class="gradient-text">Clean. Simple. Fast.</span></h2>
+    <section class="section" id="showcase">
+      <div class="container showcase-wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow">Launcher preview</p>
+          <h2 class="section-title">Clean interface, faster workflow</h2>
+          <p class="section-subtitle">A focused layout that keeps launching, updating, and managing profiles straightforward.</p>
+        </div>
 
-        <article class="preview-window reveal">
+        <article class="preview-window reveal" data-parallax data-parallax-depth="8">
           <div class="preview-head">
             <div class="preview-left">
               <img src="/assets/icon.png" alt="Lux" style="width:14px;height:14px;" />
@@ -172,15 +256,101 @@
       </div>
     </section>
 
+    <section class="section section-sm" id="supportInfo">
+      <div class="container support-grid">
+        <article class="card card-pad reveal">
+          <div class="card-label">Compatibility</div>
+          <div class="row"><span class="row-label">Minecraft versions</span><span data-version-range>1.20 - 1.21.11</span></div>
+          <div class="row"><span class="row-label">Loader</span><span data-loader>Fabric</span></div>
+          <div class="row"><span class="row-label">Operating system</span><span>Windows 10 / 11 (64-bit)</span></div>
+          <div class="row"><span class="row-label">Java</span><span>Auto-managed (JRE 21)</span></div>
+        </article>
+
+        <article class="card card-pad reveal">
+          <div class="card-label">Community and trust</div>
+          <div class="trust-grid">
+            <div class="trust-card">
+              <strong>200+</strong>
+              <span>Discord members</span>
+            </div>
+            <div class="trust-card">
+              <strong>14+</strong>
+              <span>Default optimization mods</span>
+            </div>
+            <div class="trust-card">
+              <strong>1-click</strong>
+              <span>Installer setup flow</span>
+            </div>
+            <div class="trust-card">
+              <strong>Secure</strong>
+              <span>Microsoft auth integration</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2 class="section-title">Common questions</h2>
+          <p class="section-subtitle">Everything you need to know before installing Lux Client.</p>
+        </div>
+
+        <div class="faq-list">
+          <article class="faq-item reveal" data-faq-item>
+            <button class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-1" id="faq-button-1">
+              Is Lux Client free to use?
+              <span>+</span>
+            </button>
+            <div class="faq-panel" id="faq-1" role="region" aria-labelledby="faq-button-1" data-faq-panel hidden>
+              Yes. Lux Client is currently free to download and use for Windows players.
+            </div>
+          </article>
+
+          <article class="faq-item reveal" data-faq-item>
+            <button class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-2" id="faq-button-2">
+              Which Minecraft versions are supported?
+              <span>+</span>
+            </button>
+            <div class="faq-panel" id="faq-2" role="region" aria-labelledby="faq-button-2" data-faq-panel hidden>
+              Lux Client currently supports Minecraft versions in the <span data-version-range>1.20 - 1.21.11</span> range.
+            </div>
+          </article>
+
+          <article class="faq-item reveal" data-faq-item>
+            <button class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-3" id="faq-button-3">
+              Do I need to install Java manually?
+              <span>+</span>
+            </button>
+            <div class="faq-panel" id="faq-3" role="region" aria-labelledby="faq-button-3" data-faq-panel hidden>
+              No. Lux Client can detect your installed Java or automatically configure JRE 21 if needed.
+            </div>
+          </article>
+
+          <article class="faq-item reveal" data-faq-item>
+            <button class="faq-toggle" data-faq-toggle aria-expanded="false" aria-controls="faq-4" id="faq-button-4">
+              How do updates work?
+              <span>+</span>
+            </button>
+            <div class="faq-panel" id="faq-4" role="region" aria-labelledby="faq-button-4" data-faq-panel hidden>
+              The launcher checks for updates in the background and shows an in-app update banner when a new release is available.
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <article class="card cta reveal">
           <img class="cta-logo" src="/assets/icon.png" alt="Lux" />
           <h2 class="title"><span class="gradient-text">Ready to play faster?</span></h2>
-          <p class="subtitle">Join over 200 players already using Lux Client.</p>
+          <p class="subtitle">Join players already using Lux Client for cleaner setup and better performance.</p>
           <div class="hero-actions" style="margin-top:18px;">
-            <a class="btn btn-primary" href="/download/">Download free</a>
-            <a class="btn btn-outline" href="https://discord.gg/Wck39YDpZx" target="_blank" rel="noreferrer" data-discord-link>Join Discord</a>
+            <a class="btn btn-primary btn-lg" href="/download/">Download free</a>
+            <a class="btn btn-outline btn-lg" href="https://discord.gg/Wck39YDpZx" target="_blank" rel="noreferrer" data-discord-link>Join Discord</a>
           </div>
         </article>
       </div>

@@ -65,6 +65,10 @@
     const items = qa('.reveal');
     if (!items.length) return;
 
+    items.forEach((el, i) => {
+      el.style.setProperty('--reveal-delay', String(Math.min(i % 6, 5)));
+    });
+
     if (!('IntersectionObserver' in window)) {
       items.forEach((el) => el.classList.add('is-visible'));
       return;
@@ -83,6 +87,78 @@
     );
 
     items.forEach((el) => obs.observe(el));
+  }
+
+  function setupParallax() {
+    const layers = qa('[data-parallax]');
+    if (!layers.length) return;
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced) return;
+
+    let raf = 0;
+    const state = { x: 0, y: 0 };
+
+    const update = () => {
+      layers.forEach((el) => {
+        const depth = Number(el.getAttribute('data-parallax-depth') || 8);
+        const px = state.x * (depth / 120);
+        const py = state.y * (depth / 120);
+        el.style.setProperty('--parallax-x', `${px.toFixed(2)}px`);
+        el.style.setProperty('--parallax-y', `${py.toFixed(2)}px`);
+      });
+      raf = 0;
+    };
+
+    const onMove = (ev) => {
+      const nx = (ev.clientX / window.innerWidth - 0.5) * 2;
+      const ny = (ev.clientY / window.innerHeight - 0.5) * 2;
+      state.x = nx * 10;
+      state.y = ny * 8;
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    const onLeave = () => {
+      state.x = 0;
+      state.y = 0;
+      if (!raf) raf = requestAnimationFrame(update);
+    };
+
+    window.addEventListener('mousemove', onMove);
+    window.addEventListener('mouseleave', onLeave);
+  }
+
+  function setupFaq() {
+    const items = qa('[data-faq-item]');
+    if (!items.length) return;
+
+    items.forEach((item) => {
+      const toggle = q('[data-faq-toggle]', item);
+      const panel = q('[data-faq-panel]', item);
+      if (!toggle || !panel) return;
+
+      toggle.addEventListener('click', () => {
+        const opened = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', opened ? 'false' : 'true');
+        panel.hidden = opened;
+        item.classList.toggle('is-open', !opened);
+      });
+    });
+  }
+
+  function setupAnchorScroll() {
+    qa('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', (ev) => {
+        const href = link.getAttribute('href');
+        if (!href || href.length < 2) return;
+        const target = q(href);
+        if (!target) return;
+        ev.preventDefault();
+        const navH = q('#navbar')?.offsetHeight || 0;
+        const y = target.getBoundingClientRect().top + window.scrollY - navH - 8;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
+    });
   }
 
   function makeAnnouncementRow(a) {
@@ -335,6 +411,9 @@
     initChangelog();
     initStore();
     setupReveal();
+    setupParallax();
+    setupFaq();
+    setupAnchorScroll();
     // Load counter on any page that has [data-download-count]
     if (document.querySelector('[data-download-count]')) loadDownloadCount();
   }
