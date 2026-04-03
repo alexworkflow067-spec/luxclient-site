@@ -5,7 +5,7 @@
   latestVersion: "1.21.11",
   loader: "Fabric",
   download: {
-    file: "https://github.com/alexworkflow067-spec/-lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe",
+    file: "https://github.com/alexworkflow067-spec/lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe",
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
