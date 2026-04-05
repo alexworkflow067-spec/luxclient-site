@@ -12,6 +12,13 @@
     Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
 
 [[headers]]
+  for = "/files/*"
+  [headers.values]
+    Content-Disposition = "attachment"
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
+
+[[headers]]
   for = "/updates/*"
   [headers.values]
     Access-Control-Allow-Origin = "*"

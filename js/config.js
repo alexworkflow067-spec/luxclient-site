@@ -9,7 +9,7 @@
     version: "1.0.0",
     sizeLabel: "~100 MB",
     platformLabel: "Windows x64",
-    sha256: "39a4a6cfc436dd8957d70f96257a918e006a609c4bde065e90b4f8a62b481ff0"
+    sha256: "4e60e3206b464f637628e813b0327df28019d80e434de5e81303206b4643e1fd"
   },
   community: {
     discord: "https://discord.gg/Wck39YDpZx",
@@ -22,7 +22,7 @@
     { label: "Lucnoxity", url: "https://youtube.com/@lucnoxity1258" },
     { label: "Optimization Mods", url: "https://modrinth.com/mods?g=categories:%27optimization%27" }
   ],
-  defaultMods: ["Fabric API", "Cloth Config", "Sodium", "Lithium", "FerriteCore", "ImmediatelyFast", "Entity Culling", "Dynamic FPS", "Krypton", "Cubes Without Borders", "Mod Menu", "FastQuit", "Marlow's Crystal Optimizer", "Hero's Anchor Optimizer"],
+  defaultMods: ["Fabric API", "Cloth Config", "Sodium", "Lithium", "FerriteCore", "ImmediatelyFast", "Entity Culling", "Dynamic FPS", "Krypton", "ModernFix", "Cubes Without Borders", "Mod Menu", "FastQuit", "Marlow's Crystal Optimizer", "Hero's Anchor Optimizer"],
   partners: [
     { label: "Lucnoxity", role: "Creator", color: "#acd0ff" },
     { label: "Alexetrey", role: "Developer", color: "#a8e6a3" }
