@@ -1,8 +1,8 @@
 version: 1.0.0
 files:
-  - url: https://github.com/alexworkflow067-spec/lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe
-    sha512: 16PdweLiG5bsfwiCTh4nYZufkXwVv/9LIWTdNj6e/z15YfVV4aDixe3IOSo7va14FsvCsbUxsv0Wuc13agLl7A==
-    size: 104863465
-path: https://github.com/alexworkflow067-spec/lux-client/releases/download/v1.0.0/LuxClient-Setup-1.0.0.exe
-sha512: 16PdweLiG5bsfwiCTh4nYZufkXwVv/9LIWTdNj6e/z15YfVV4aDixe3IOSo7va14FsvCsbUxsv0Wuc13agLl7A==
-releaseDate: '2026-03-31T00:00:00.000Z'
+  - url: LuxClient-Setup-1.0.0.exe
+    sha512: EgeuZYXymjMacsH2MchNniXv7LUuEfLTPoffa6Cu2CxPAbQ14d+h6ourvkkuVtSonjWazlSz9OnXg+VxG76nwQ==
+    size: 104880216
+path: LuxClient-Setup-1.0.0.exe
+sha512: EgeuZYXymjMacsH2MchNniXv7LUuEfLTPoffa6Cu2CxPAbQ14d+h6ourvkkuVtSonjWazlSz9OnXg+VxG76nwQ==
+releaseDate: '2026-04-05T14:07:48.822Z'

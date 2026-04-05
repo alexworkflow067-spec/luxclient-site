@@ -4,6 +4,12 @@
 [build.environment]
   GIT_LFS_ENABLED = "true"
 
+[[redirects]]
+  from = "/files/LuxClient-Setup-1.0.0.exe"
+  to = "/downloads/LuxClient-Setup-latest.exe"
+  status = 301
+  force = true
+
 [[headers]]
   for = "/downloads/*"
   [headers.values]

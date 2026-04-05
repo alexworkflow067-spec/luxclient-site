@@ -171,10 +171,12 @@
     const releaseVersion = q('#releaseVersion');
     const releaseMeta = q('#releaseMeta');
     const downloadSha256 = q('#downloadSha256');
+    const directDownloadLink = q('[data-direct-download]');
     const dynamicWarn = q('#releaseDynamicWarning');
     if (!btn || !status || !releaseVersion || !releaseMeta) return;
 
     const url = downloadFile;
+    const filename = config.download?.filename || 'LuxClient-Setup-1.0.0.exe';
     const version = config.download?.version || '1.0.0';
     const sizeLabel = config.download?.sizeLabel || '~100 MB';
     const platformLabel = config.download?.platformLabel || 'Windows x64';
@@ -207,6 +209,10 @@
     setBadge('Ready to download', 'badge badge-ok');
     if (dynamicWarn) dynamicWarn.classList.add('hidden');
     setBtn('Download for Windows', 'Free · No account required', false);
+    if (directDownloadLink) {
+      directDownloadLink.setAttribute('href', url);
+      directDownloadLink.setAttribute('download', filename);
+    }
 
     // Load download count on page load
     loadDownloadCount();
@@ -218,7 +224,7 @@
       // Create a hidden <a> with download attribute to force browser download dialog
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'LuxClient-Setup-1.0.0.exe';
+      a.download = filename;
       document.body.appendChild(a);
       a.click();
       document.body.removeChild(a);
